@@ -81,27 +81,64 @@ public class TwitterSpout extends BaseRichSpout {
         this.collector = collector;
 
         StatusListener listener = new StatusListener() {
+            /**
+             * 
+             * {@inheritDoc}
+             * 
+             * @see twitter4j.StatusListener#onStatus(twitter4j.Status)
+             */
             @Override
             public void onStatus(Status status) {
                 TwitterSpout.this.queue.offer(status);
             }
 
+            /**
+             * 
+             * {@inheritDoc}
+             * 
+             * @see twitter4j.StatusListener#onDeletionNotice(twitter4j.StatusDeletionNotice)
+             */
             @Override
             public void onDeletionNotice(StatusDeletionNotice sdn) {
             }
 
+            /**
+             * 
+             * {@inheritDoc}
+             * 
+             * @see twitter4j.StatusListener#onTrackLimitationNotice(int)
+             */
             @Override
             public void onTrackLimitationNotice(int i) {
             }
 
+            /**
+             * 
+             * {@inheritDoc}
+             * 
+             * @see twitter4j.StatusListener#onScrubGeo(long, long)
+             */
             @Override
             public void onScrubGeo(long l, long l1) {
             }
 
+            /**
+             * 
+             * {@inheritDoc}
+             * 
+             * @see twitter4j.StatusListener#onStallWarning(twitter4j.StallWarning)
+             */
             @Override
             public void onStallWarning(StallWarning stallWarning) {
             }
 
+            /**
+             * 
+             * {@inheritDoc}
+             * 
+             * @see twitter4j.StreamListener#onException(java.lang.Exception)
+             */
+            @SuppressWarnings("javadoc")
             @Override
             public void onException(Exception e) {
             }
@@ -151,24 +188,6 @@ public class TwitterSpout extends BaseRichSpout {
         Config ret = new Config();
         ret.setMaxTaskParallelism(1);
         return ret;
-    }
-
-    /**
-     * {@inheritDoc}
-     * 
-     * @see backtype.storm.topology.base.BaseRichSpout#ack(java.lang.Object)
-     */
-    @Override
-    public void ack(Object id) {
-    }
-
-    /**
-     * {@inheritDoc}
-     * 
-     * @see backtype.storm.topology.base.BaseRichSpout#fail(java.lang.Object)
-     */
-    @Override
-    public void fail(Object id) {
     }
 
     /**

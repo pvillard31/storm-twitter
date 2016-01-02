@@ -31,7 +31,7 @@ public class Topology {
     /** name of the topology */
     static final String TOPOLOGY_NAME = "storm-twitter"; //$NON-NLS-1$
     /** words for filtering */
-    static final String[] FILTERS = new String[]{"hortonworks", "hadoop"}; //$NON-NLS-1$ //$NON-NLS-2$
+    static final String[] FILTERS = new String[]{"hortonworks", "hadoop", "spark", "hive", "hdfs"}; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
     /** metastore URI for Hive */
     static final String META_STORE_URI = "thrift://ip-172-31-30-70.eu-central-1.compute.internal:9083"; //$NON-NLS-1$
     /** cluster is HA */
