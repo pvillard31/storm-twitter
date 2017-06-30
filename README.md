@@ -6,7 +6,7 @@ Storm topology to stream tweets to store both in HDFS (using HdfsBolt) and Hive 
 
 The idea of this topology is to define a set of keywords for which we want to analyze the trend along the time. Inside the topology class, it is possible to define the keywords for which we want to collect the tweets, and also to define the frequency (tick) at which we want our analysis granularity. This is also the place where are configured the parameters regarding HDFS and Hive.
 
-![Topology] (img/storm_topology.PNG)
+![Topology](img/storm_topology.PNG)
 
 ## Deployment
 
@@ -28,4 +28,4 @@ Create the tweet_counts Hive table corresponding to your needs :
 
 What we can view in the Hive view in Ambari (Hortonworks distribution) :
 
-![Hive view] (img/hive_view.PNG)
+![Hive view](img/hive_view.PNG)
